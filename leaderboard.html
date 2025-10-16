@@ -355,16 +355,19 @@
         <!-- CruxEval Input Prediction Section (Default) -->
         <div id="models" class="leaderboard-section active">
           <h2><span class="icon">📊</span> CruxEval Input Prediction</h2>
-          <div style="margin-bottom: 20px;">
-            <p style="color: #666; font-size: 0.9em;">Consistency = 100% - Inconsistency Rate. Higher bars are better for both metrics.</p>
+          <div style="margin-bottom: 20px">
+            <p style="color: #666; font-size: 0.9em">
+              Consistency = 100% - Inconsistency Rate. Higher bars are better
+              for both metrics.
+            </p>
           </div>
-          <div style="height: 500px; margin-bottom: 30px;">
+          <div style="height: 500px; margin-bottom: 30px">
             <canvas id="cruxEvalInputChart"></canvas>
           </div>
-          
+
           <!-- Summary Table -->
           <h3>Aggregated Results Summary</h3>
-          <div style="overflow-x: auto;">
+          <div style="overflow-x: auto">
             <table>
               <thead>
                 <tr>
@@ -412,16 +415,19 @@
         <!-- HumanEval Input Prediction Section -->
         <div id="datasets" class="leaderboard-section">
           <h2><span class="icon">📁</span> HumanEval Input Prediction</h2>
-          <div style="margin-bottom: 20px;">
-            <p style="color: #666; font-size: 0.9em;">Consistency = 100% - Inconsistency Rate. Higher bars are better for both metrics.</p>
+          <div style="margin-bottom: 20px">
+            <p style="color: #666; font-size: 0.9em">
+              Consistency = 100% - Inconsistency Rate. Higher bars are better
+              for both metrics.
+            </p>
           </div>
-          <div style="height: 500px; margin-bottom: 30px;">
+          <div style="height: 500px; margin-bottom: 30px">
             <canvas id="humanEvalInputChart"></canvas>
           </div>
-          
+
           <!-- Summary Table -->
           <h3>Aggregated Results Summary</h3>
-          <div style="overflow-x: auto;">
+          <div style="overflow-x: auto">
             <table>
               <thead>
                 <tr>
@@ -464,16 +470,19 @@
         <!-- CruxEval Output Prediction Section -->
         <div id="tasks" class="leaderboard-section">
           <h2><span class="icon">✅</span> CruxEval Output Prediction</h2>
-          <div style="margin-bottom: 20px;">
-            <p style="color: #666; font-size: 0.9em;">Consistency = 100% - Inconsistency Rate. Higher bars are better for both metrics.</p>
+          <div style="margin-bottom: 20px">
+            <p style="color: #666; font-size: 0.9em">
+              Consistency = 100% - Inconsistency Rate. Higher bars are better
+              for both metrics.
+            </p>
           </div>
-          <div style="height: 500px; margin-bottom: 30px;">
+          <div style="height: 500px; margin-bottom: 30px">
             <canvas id="cruxEvalOutputChart"></canvas>
           </div>
-          
+
           <!-- Summary Table -->
           <h3>Aggregated Results Summary</h3>
-          <div style="overflow-x: auto;">
+          <div style="overflow-x: auto">
             <table>
               <thead>
                 <tr>
@@ -516,9 +525,9 @@
         <!-- Multiple Evaluation Results Section -->
         <div id="mutations" class="leaderboard-section">
           <h2><span class="icon">🔄</span> Additional Evaluation Results</h2>
-          
+
           <h3>HumanEval Output Prediction</h3>
-          <div style="overflow-x: auto; margin-bottom: 30px;">
+          <div style="overflow-x: auto; margin-bottom: 30px">
             <table>
               <thead>
                 <tr>
@@ -559,7 +568,7 @@
                   <td>4/967 (0.41%)</td>
                   <td class="score">964/992 (97.18%)</td>
                 </tr>
-                <tr style="background-color: #f0f8ff;">
+                <tr style="background-color: #f0f8ff">
                   <td><strong>Aggregated Results</strong></td>
                   <td><strong>160/4563 (3.51%)</strong></td>
                   <td class="score"><strong>5267/6606 (79.73%)</strong></td>
@@ -571,9 +580,9 @@
               </tbody>
             </table>
           </div>
-          
+
           <h3>CodeMMLU MCQ</h3>
-          <div style="overflow-x: auto; margin-bottom: 30px;">
+          <div style="overflow-x: auto; margin-bottom: 30px">
             <table>
               <thead>
                 <tr>
@@ -614,7 +623,7 @@
                   <td>1/130 (0.77%)</td>
                   <td class="score">130/132 (98.48%)</td>
                 </tr>
-                <tr style="background-color: #f0f8ff;">
+                <tr style="background-color: #f0f8ff">
                   <td><strong>Aggregated Results</strong></td>
                   <td><strong>167/569 (29.35%)</strong></td>
                   <td class="score"><strong>528/831 (63.54%)</strong></td>
@@ -626,9 +635,9 @@
               </tbody>
             </table>
           </div>
-          
+
           <h3>Code Generation Tasks</h3>
-          <div style="overflow-x: auto;">
+          <div style="overflow-x: auto">
             <table>
               <thead>
                 <tr>
@@ -689,15 +698,9 @@
 
       <footer>
         <p>
-          © 2024 MuCoCo Benchmark |
-          <a href="https://github.com/anonymous/mucoco" target="_blank"
-            >GitHub</a
-          >
+          © 2025 MuCoCo Benchmark |
+          <a href="#">GitHub</a>
           | <a href="#paper">Paper</a>
-        </p>
-        <p>
-          For anonymous submission - Will be moved to official repository after
-          acceptance
         </p>
       </footer>
     </div>
@@ -738,10 +741,10 @@
           this.style.cursor = "pointer";
         });
       });
-      
+
       // Chart configurations
       const chartConfig = {
-        type: 'bar',
+        type: "bar",
         options: {
           responsive: true,
           maintainAspectRatio: false,
@@ -750,91 +753,130 @@
               beginAtZero: true,
               max: 100,
               ticks: {
-                callback: function(value) {
-                  return value + '%';
-                }
-              }
-            }
+                callback: function (value) {
+                  return value + "%";
+                },
+              },
+            },
           },
           plugins: {
             legend: {
-              position: 'top',
+              position: "top",
             },
             tooltip: {
               callbacks: {
-                label: function(context) {
-                  return context.dataset.label + ': ' + context.parsed.y.toFixed(1) + '%';
-                }
-              }
-            }
-          }
-        }
+                label: function (context) {
+                  return (
+                    context.dataset.label +
+                    ": " +
+                    context.parsed.y.toFixed(1) +
+                    "%"
+                  );
+                },
+              },
+            },
+          },
+        },
       };
-      
+
       // CruxEval Input Prediction Chart
-      const cruxEvalInputCtx = document.getElementById('cruxEvalInputChart').getContext('2d');
+      const cruxEvalInputCtx = document
+        .getElementById("cruxEvalInputChart")
+        .getContext("2d");
       new Chart(cruxEvalInputCtx, {
         ...chartConfig,
         data: {
-          labels: ['Qwen2.5-Coder', 'Gemma-3-12b', 'DeepSeek-V3.2', 'LLama-3.1-8B', 'GPT-5', 'GPT-4o'],
-          datasets: [{
-            label: 'Consistency Rate',
-            data: [91.12, 86.79, 81.37, 94.51, 98.56, 87.03],
-            backgroundColor: 'rgba(70, 130, 180, 0.8)',
-            borderColor: 'rgba(70, 130, 180, 1)',
-            borderWidth: 1
-          }, {
-            label: 'Model Accuracy',
-            data: [84.14, 76.98, 54.33, 94.01, 98.53, 78.72],
-            backgroundColor: 'rgba(60, 179, 113, 0.8)',
-            borderColor: 'rgba(60, 179, 113, 1)',
-            borderWidth: 1
-          }]
-        }
+          labels: [
+            "Qwen2.5-Coder",
+            "Gemma-3-12b",
+            "DeepSeek-V3.2",
+            "LLama-3.1-8B",
+            "GPT-5",
+            "GPT-4o",
+          ],
+          datasets: [
+            {
+              label: "Consistency Rate",
+              data: [91.12, 86.79, 81.37, 94.51, 98.56, 87.03],
+              backgroundColor: "rgba(70, 130, 180, 0.8)",
+              borderColor: "rgba(70, 130, 180, 1)",
+              borderWidth: 1,
+            },
+            {
+              label: "Model Accuracy",
+              data: [84.14, 76.98, 54.33, 94.01, 98.53, 78.72],
+              backgroundColor: "rgba(60, 179, 113, 0.8)",
+              borderColor: "rgba(60, 179, 113, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
       });
-      
+
       // HumanEval Input Prediction Chart
-      const humanEvalInputCtx = document.getElementById('humanEvalInputChart').getContext('2d');
+      const humanEvalInputCtx = document
+        .getElementById("humanEvalInputChart")
+        .getContext("2d");
       new Chart(humanEvalInputCtx, {
         ...chartConfig,
         data: {
-          labels: ['Qwen2.5-Coder', 'Gemma-3-12b', 'DeepSeek-V3.2', 'LLama-3.1-8B', 'GPT-5'],
-          datasets: [{
-            label: 'Consistency Rate',
-            data: [96.54, 93.43, 90.24, 81.98, 98.45],
-            backgroundColor: 'rgba(70, 130, 180, 0.8)',
-            borderColor: 'rgba(70, 130, 180, 1)',
-            borderWidth: 1
-          }, {
-            label: 'Model Accuracy',
-            data: [88.42, 82.32, 73.56, 47.52, 99.24],
-            backgroundColor: 'rgba(60, 179, 113, 0.8)',
-            borderColor: 'rgba(60, 179, 113, 1)',
-            borderWidth: 1
-          }]
-        }
+          labels: [
+            "Qwen2.5-Coder",
+            "Gemma-3-12b",
+            "DeepSeek-V3.2",
+            "LLama-3.1-8B",
+            "GPT-5",
+          ],
+          datasets: [
+            {
+              label: "Consistency Rate",
+              data: [96.54, 93.43, 90.24, 81.98, 98.45],
+              backgroundColor: "rgba(70, 130, 180, 0.8)",
+              borderColor: "rgba(70, 130, 180, 1)",
+              borderWidth: 1,
+            },
+            {
+              label: "Model Accuracy",
+              data: [88.42, 82.32, 73.56, 47.52, 99.24],
+              backgroundColor: "rgba(60, 179, 113, 0.8)",
+              borderColor: "rgba(60, 179, 113, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
       });
-      
+
       // CruxEval Output Prediction Chart
-      const cruxEvalOutputCtx = document.getElementById('cruxEvalOutputChart').getContext('2d');
+      const cruxEvalOutputCtx = document
+        .getElementById("cruxEvalOutputChart")
+        .getContext("2d");
       new Chart(cruxEvalOutputCtx, {
         ...chartConfig,
         data: {
-          labels: ['Qwen2.5-Coder', 'Gemma-3-12b', 'DeepSeek-V3.2', 'LLama-3.1-8B', 'GPT-5'],
-          datasets: [{
-            label: 'Consistency Rate',
-            data: [84.43, 77.78, 77.15, 68.19, 98.25],
-            backgroundColor: 'rgba(70, 130, 180, 0.8)',
-            borderColor: 'rgba(70, 130, 180, 1)',
-            borderWidth: 1
-          }, {
-            label: 'Model Accuracy',
-            data: [51.0, 37.93, 47.12, 26.26, 93.35],
-            backgroundColor: 'rgba(60, 179, 113, 0.8)',
-            borderColor: 'rgba(60, 179, 113, 1)',
-            borderWidth: 1
-          }]
-        }
+          labels: [
+            "Qwen2.5-Coder",
+            "Gemma-3-12b",
+            "DeepSeek-V3.2",
+            "LLama-3.1-8B",
+            "GPT-5",
+          ],
+          datasets: [
+            {
+              label: "Consistency Rate",
+              data: [84.43, 77.78, 77.15, 68.19, 98.25],
+              backgroundColor: "rgba(70, 130, 180, 0.8)",
+              borderColor: "rgba(70, 130, 180, 1)",
+              borderWidth: 1,
+            },
+            {
+              label: "Model Accuracy",
+              data: [51.0, 37.93, 47.12, 26.26, 93.35],
+              backgroundColor: "rgba(60, 179, 113, 0.8)",
+              borderColor: "rgba(60, 179, 113, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
       });
     </script>
   </body>
